@@ -10,7 +10,8 @@ $('button').on('click', function(){
 
 // console.log($('div').eq(2).find('.more'));
 // console.log($('.some').closest('.findMe'));
-console.log($('.more').eq(0).siblings());
+$('.more').fadeOut(1200);
+$('.some').fadeIn(1200);
 //$('button').on('click', function(){
 //    $(this).toggleClass('active');
 //});
