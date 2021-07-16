@@ -12,7 +12,40 @@ $('[data-count="second"]').on('click', () => {
 $('button').eq(2).on('click', () =>{
     $('.w-500').fadeToggle(800);
 
-})
+});
+
+$('#trigger').click(() => $('#trigger').createModal({
+    text: {
+        title: 'Dinamic modal title ',
+        body: 'Lorem'
+    },
+    btns: {
+        count: 3,
+        settings: [
+            [
+                'Close',
+                ['btn-danger', 'mr10'],
+                true
+            ],
+            [
+                'Save changes',
+                ['btn-success'],
+                false,
+                () => {
+                    alert('Данные сохранены');
+                }
+            ],
+            [
+                'Another button',
+                ['btn-dark', 'ml-10'],
+                false,
+                () => {
+                    alert('hi world');
+                }
+            ]
+        ]
+    }
+}));
 
 //$('button').on('click', function(){
 //    $('div').eq(2).toggleClass('active');
